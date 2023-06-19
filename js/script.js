@@ -8,14 +8,12 @@ function playRound(playerSelection, computerSelection) {
    if (computerSelection === playerSelection) {
       return "Aww, it's a tie";
    }
-   else if (computerSelection === "paper" && playerSelection === "rock") {
-      return "You lose! Paper beats rock";
-   }
-   else if (computerSelection === "scissors" && playerSelection === "rock") {
-      return "You win! Rock beats scissors";
+   switch(true) {
+      case playerSelection === "rock" && computerSelection === "scissors":
+      case playerSelection === "paper" && computerSelection === "rock":
+      case playerSelection === "scissors" && computerSelection === "paper":
+         return "Yeah! You win, way to go!";
+      default:
+         return "Too bad, you lose!"
    }
 }
-
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
