@@ -12,8 +12,23 @@ function playRound(playerSelection, computerSelection) {
       case playerSelection === "rock" && computerSelection === "scissors":
       case playerSelection === "paper" && computerSelection === "rock":
       case playerSelection === "scissors" && computerSelection === "paper":
-         return `Yeah, you win! Your ${playerSelection} beat ${computerSelection}!`;
+         return `Yeah, you win! ${playerSelection} beats ${computerSelection}!`;
       default:
-         return `Too bad, you lost. ${computerSelection} beats ${playerSelection}`;
+         return `Too bad, you lost. ${computerSelection} beats ${playerSelection}.`;
    }
+}
+
+function game() {
+   let playerScore = 0;
+
+   for (let i = 0; i < 5; i++) {
+      playerSelection = prompt("Rock, paper, scissors, shoot!").toLowerCase;
+      computerSelection = getComputerChoice();
+
+      let gameRound = playRound(playerSelection, computerSelection);
+      console.log(gameRound);
+
+      playerScore += gameRound[0] == 'Y' ? 1 : gameRound[0] == 'D' ? 0 : -1;
+      // Adds 1 to playerScore if they win, 0 if they draw, and removes one if they lose
+   }   
 }
