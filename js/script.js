@@ -45,6 +45,5 @@ function game() {
    else {
       return "Too bad, so sad. Better luck next time kid."
    }
-   /* Game runs 5 times in the for loop. If the player score is positive,
-   i.e. if they win at least 3 rounds, the player wins. */
+   // Game runs 5 times in the for loop. If the player score is positive, the player wins.
 }
