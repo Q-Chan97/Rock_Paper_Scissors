@@ -2,6 +2,7 @@ function getComputerChoice() {
    const moves = ["rock", "paper", "scissors"];
    let index = Math.floor(Math.random() * 3);
    return moves[index];
+   // Rock, paper, and scissors are assigned 0, 1, and 2 respectively
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -13,6 +14,9 @@ function playRound(playerSelection, computerSelection) {
       case playerSelection === "paper" && computerSelection === "rock":
       case playerSelection === "scissors" && computerSelection === "paper":
          return `Yeah, you win! ${playerSelection} beats ${computerSelection}!`;
+         /* I coded all player win cases to have the same return, rather
+         than code out a whole bunch of if statements for each 
+         individual case. */
       default:
          return `Too bad, you lost. ${computerSelection} beats ${playerSelection}.`;
    }
