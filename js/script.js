@@ -31,4 +31,14 @@ function game() {
       playerScore += gameRound[0] == 'Y' ? 1 : gameRound[0] == 'D' ? 0 : -1;
       // Adds 1 to playerScore if they win, 0 if they draw, and removes one if they lose
    }   
+
+   if (playerScore > 0) {
+      return "Congratulation, A Winner Is You!"
+   }
+   else if (playerScore == 0) {
+      return "Hooray, no-one wins."
+   }
+   else {
+      return "Too bad, so sad. Better luck next time kid."
+   }
 }
