@@ -12,8 +12,8 @@ function playRound(playerSelection, computerSelection) {
       case playerSelection === "rock" && computerSelection === "scissors":
       case playerSelection === "paper" && computerSelection === "rock":
       case playerSelection === "scissors" && computerSelection === "paper":
-         return "Yeah! You win, way to go!";
+         return `Yeah, you win! Your ${playerSelection} beat ${computerSelection}!`;
       default:
-         return "Too bad, you lose!"
+         return `Too bad, you lost. ${computerSelection} beats ${playerSelection}`;
    }
 }
